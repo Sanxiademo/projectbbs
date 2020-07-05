@@ -3,15 +3,15 @@
 开发工具为IDEA</a>
 
 # 功能IDEA
-SpringSecurity4<br>
+# SpringSecurity4<br>
 1、登录和注册<br>
 2、（分类）浏览话题<br>
 3、发表话题<br>
 
-第三方服务器<br>
+# 第三方服务器<br>
 4、上传照片<br>
 
-Redis<br>
+# Redis<br>
 5、评论以及评论赞<br>
 6、站内信通知<br>
 7、用户积分排行榜<br>
