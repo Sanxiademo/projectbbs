@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="Programming forum about Java powered by Spring Framework" name="description"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+        <title>Internet Forum</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" rel="stylesheet"
+              type="text/css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+                <div class="container">
+                    <ul class="left hide-on-med-and-down" id="nav-left">
+                        <li>
+                            <a style="font-size:25px;color:white" th:href="@{'/'}">吉吉国王论坛</a>
+                        </li>
+                    </ul>
+
+                    <ul class="right hide-on-med-and-down" id="nav-right">
+                        <li>
+                            <a th:href="@{'/'}">主页</a>
+                        </li>
+                        <li>
+                            <a th:href="@{'/login'}">登录</a>
+                        </li>
+                        <li>
+                            <a th:href="@{'/register'}">注册</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main layout:fragment="content">
+            <p>Default content</p>
+        </main>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Je.perdre</h5>
+                        <p class="white-text">致力于学习交流的社交平台。</p>
+                        <p class="white-text">在这里只有你想不到，冒得我们做不到的！</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">友情链接Links</h5>
+                        <ul>
+                            <li>
+                                <a class="white-text" href="https://github.com/Sanxiademo/projectbbs.git">Github</a>
+                            </li>
+                            <li>
+                                <a class="white-text" th:href="aboutUs.html">关于我们</a>
+                            </li>
+                            <li>
+                                <a class="white-text" th:href="title.html">关于课题</a>
+                            </li>
+                            <!--                        <li><a class="white-text" th:href="conacatUs.html">联系我</a></li>-->
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"
+                type="text/javascript"></script>
+    </body>
+</html>

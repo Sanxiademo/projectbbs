@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout/online"> -->
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="Programming forum about Java powered by Spring Framework" name="description"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+    <title th:text="${status}">404</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</head>
+<body>
+<main class="container" layout:fragment="content">
+    <section class="row">
+        <div class="col s12">
+            <h1 class="flow-text center">Error</h1>
+            <p class="center">恭喜你中奖404，请返回并兑换！！！</p>
+        </div>
+    </section>
+</main>
+</body>
+</html>

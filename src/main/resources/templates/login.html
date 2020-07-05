@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html layout:decorator="layout/offline" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+</head>
+<body>
+<main layout:fragment="content">
+    <article class="container" style="padding-top: 3%;">
+        <header class="row">
+            <div class="col s12">
+                <h3 class="center">登录</h3>
+                <h5 class="center">Sign in</h5>
+                <p class="center flow-text" th:if="${param.error}">用户名或密码有误，请输入正确!</p>
+            </div>
+        </header>
+        <section>
+            <form method="post" th:action="@{/login}">
+                <div class="row">
+                    <div class="col s12">
+                        <label> 用户名:
+                            <input data-length="10" maxlength="10" name="username" required="required" type="text"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <label> 密码:
+                            <input data-length="10" maxlength="10" name="password" required="required" type="password"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 center">
+                        <button class="btn waves-effect waves-light btn-large" name="login" type="submit">登录</button>
+                    </div>
+                </div>
+                <!-- 这一句主要防止CSRF攻击 -->
+                <input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}"/>
+            </form>
+        </section>
+    </article>
+</main>
+<!-- <script src="/webjars/jquery/3.2.1/jquery.min.js"></script>
+<script src="/webjars/materializecss/0.100.2/js/materialize.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"
+        type="text/javascript"></script>
+</body>
+</html>

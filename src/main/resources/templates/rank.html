@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html layout:decorator="layout/online"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>排行榜</title>
+</head>
+<body>
+<main layout:fragment="content">
+    <article class="container" style="padding: 3% 0 2%;">
+        <header class="row">
+            <div class="col s12">
+                <blockquote class="flow-text left" th:text="|排行榜: |">Ranking</blockquote>
+            </div>
+        </header>
+        <ul class="collection" th:each="pointName : ${pointSet}">
+            <li class="collection-item avatar">
+                <img alt="" class="circle" src="http://pj9qy0grp.bkt.clouddn.com/private.jpg"/>
+                <a class="title" th:href="@{'/profile/' + ${userDao.getIdByUsername(pointName)}}"
+                   th:text="${pointName}">pointName</a>
+                <p th:text="|得分:|+${userDao.getPoints(userDao.getIdByUsername(pointName))}">
+                    point
+                </p>
+                <p th:text="|个人简介:|+${userDao.getUserByUsername(pointName).getIntroduction()}">
+                    point
+                </p>
+                <a class="secondary-content" th:href="@{'/profile/' + ${userDao.getIdByUsername(pointName)}}">
+                    <i class="material-icons">grade</i>
+                </a>
+            </li>
+        </ul>
+    </article>
+</main>
+</body>
+</html>
