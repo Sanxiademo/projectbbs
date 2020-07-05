@@ -1,4 +1,3 @@
-# jnu_forum
 <a>前端使用Html+CSS+JS实现，
 后端使用Java语言开发，使用Spring+SpringMVC+SpringBoot+MyBatis+Redis+MySQL+Maven实现，
 开发工具为IDEA。</a>
