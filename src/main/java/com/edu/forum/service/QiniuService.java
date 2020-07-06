@@ -20,7 +20,7 @@ import com.edu.forum.util.FileUtil;
 @Service
 public class QiniuService {
     private static final Logger logger = LoggerFactory.getLogger(QiniuService.class);
-    private static String QINIU_IMAGE_DOMAIN = "http://ox6xu9hb7.bkt.clouddn.com/";
+    private static String QINIU_IMAGE_DOMAIN = "http://qd1er4hfo.bkt.gdipper.com/";
     // 设置好账号的ACCESS_KEY和SECRET_KEY
     String ACCESS_KEY = "QQIqZAZkAvDFL3HxEXtnroDE_PPXFRuVhv5b0hoS";
     String SECRET_KEY = "ev7MLbBZHecEjJ5cYaH3NlzHeEzw8ADDMEQFIoBn";

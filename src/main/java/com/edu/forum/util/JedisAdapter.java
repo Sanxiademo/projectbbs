@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import com.alibaba.fastjson.JSON;
+import redis.clients.jedis.Jedis;
 
 /**
  * jedis工具类
@@ -103,20 +104,20 @@ public class JedisAdapter {
         return redisTemplate.opsForSet().intersect(key1, key2);
     }
 
-    // public void setex(String key, String value) {
-    // // 验证码, 防机器注册，记录上次注册时间，有效期3天
-    // Jedis jedis = null;
-    // try {
-    // jedis = pool.getResource();
-    // jedis.setex(key, 10, value);
-    // } catch (Exception e) {
-    // logger.error("发生异常" + e.getMessage());
-    // } finally {
-    // if (jedis != null) {
-    // jedis.close();
-    // }
-    // }
-    // }
+//     public void setex(String key, String value) {
+//     // 验证码, 防机器注册，记录上次注册时间，有效期3天
+//     Jedis jedis = null;
+//     try {
+//     jedis = pool.getResource();
+//     jedis.setex(key, 10, value);
+//     } catch (Exception e) {
+//     logger.error("发生异常" + e.getMessage());
+//     } finally {
+//     if (jedis != null) {
+//     jedis.close();
+//     }
+//     }
+//     }
 
     public long lpush(String key, String value) {
         return redisTemplate.opsForList().leftPush(key, value);
