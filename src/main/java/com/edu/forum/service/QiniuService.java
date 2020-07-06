@@ -22,8 +22,8 @@ public class QiniuService {
     private static final Logger logger = LoggerFactory.getLogger(QiniuService.class);
     private static String QINIU_IMAGE_DOMAIN = "http://ox6xu9hb7.bkt.clouddn.com/";
     // 设置好账号的ACCESS_KEY和SECRET_KEY
-    String ACCESS_KEY = "gGFf-cA7cy-hyhN3jwTByS7h8SSDuGMtyKFZIIVf";
-    String SECRET_KEY = "7X51IlDOMO6UjQfL_vDcXPIr2PnLOickH1F2m30u";
+    String ACCESS_KEY = "QQIqZAZkAvDFL3HxEXtnroDE_PPXFRuVhv5b0hoS";
+    String SECRET_KEY = "ev7MLbBZHecEjJ5cYaH3NlzHeEzw8ADDMEQFIoBn";
     // 要上传的空间
     String bucketname = "nowcoder";
     // 密钥配置

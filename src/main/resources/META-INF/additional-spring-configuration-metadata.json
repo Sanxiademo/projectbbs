@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "multipart.maxRequestSize",
+      "type": "java.lang.String",
+      "description": "Description for multipart.maxRequestSize."
+  }
+] }
